@@ -1,0 +1,6 @@
+# Alumni data
+# Add alumni using this format:
+# - name: Alumni Name
+#   photo: alumni_photo.jpg
+#   info: Former PhD Student
+#   duration: 2020-2024

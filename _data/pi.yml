@@ -1,0 +1,14 @@
+- name: Woo Chang Kang
+  photo: headshot.jpg
+  info: Associate Professor, Department of Political Science, Korea University
+  email: woochang_kang@korea.ac.kr
+  website: https://woochangkang.github.io
+  scholar: https://scholar.google.com/citations?hl=ko&user=cBhoKjEAAAAJ
+  education:
+    [
+      "Ph.D. Political Science",
+      "Korea University",
+    ]
+
+  educationshort:
+    ["Ph.D. Political Science", "Korea University"]
