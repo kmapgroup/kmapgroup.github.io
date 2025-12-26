@@ -30,7 +30,7 @@
 ## Technical Notes
 - GitHub Pages는 `jekyll-scholar` 플러그인 지원 안 함
 - `jekyll-sitemap` 플러그인만 사용
-- `{% bibliography %}` 태그 사용 금지
+- bibliography 태그 사용 금지
 
 ## 멤버 추가 방법
 1. 사진 파일 → `/images/` 폴더에 저장
@@ -66,7 +66,7 @@
 
 4. **빌드 오류 수정**
    - `jekyll-scholar` 플러그인 제거 (GitHub Pages 미지원)
-   - `publications.md`에서 `{% bibliography %}` 태그 제거
+   - `publications.md`에서 bibliography 태그 제거
 
 5. **멤버 정보 수집 준비**
    - Google Form 양식 설계
