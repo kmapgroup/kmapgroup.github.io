@@ -1,8 +1,31 @@
 # Team members data
-# Add members using this format:
-# - name: Member Name
-#   photo: member_photo.jpg
-#   info: PhD Student
-#   email: member@korea.ac.kr
-#   website: https://example.com
-#   scholar: https://scholar.google.com/...
+
+- name: Byoungha Lee (이병하)
+  photo: 멤버사진/이병하 증명사진_2021 - Byoungha Lee.jpg
+  info: Researcher, 서울시립대학교 국제관계학과
+  email: byoungha@uos.ac.kr
+  research: 이민정책 비교, 이민국가 이론
+
+- name: Heedo Lee (이희도)
+  photo: 멤버사진/Lee_heedo.jpeg
+  info: MA Student, 연세대학교
+  email: leeway@yonsei.ac.kr
+  research: Migration, Intergroup Relations, Built Environment, Urban Planning
+
+- name: Jiwoon Kim (김지운)
+  photo: 멤버사진/김지운_증명 - Jiwoon Kim (Jun Kim).jpg
+  info: PhD Student, 연세대학교
+  email: junkim4023@gmail.com
+  research: International Relations, Chinese Politics, Public Opinion & Political Psychology, Migration & Diaspora Politics
+
+- name: Kyungrim Chung (정경림)
+  photo: 멤버사진/주민등록증3.5x4.5cm - Kelly C.jpg
+  info: MA Student, 연세대학교
+  email: kyungrimchungkelly@gmail.com
+  research: International Political Economy, FDI, Interest Groups
+
+- name: Sumin Kim (김수민)
+  photo: 멤버사진/IMG_0773 - 김수민.jpeg
+  info: MA Student, 고려대학교 정치외교학과
+  email: suminyay@korea.ac.kr
+  research: 정치행태, 정치심리학
