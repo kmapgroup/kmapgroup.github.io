@@ -33,7 +33,7 @@ permalink: /members/
 <div class="col-sm-4 col-xs-12">
   <h4>{{ member.name }}</h4>
   <i>{{ member.info }}<br></i>
-  {% if member.research %}<b>Research:</b> {{ member.research }}<br>{% endif %}
+  {% if member.research %}<b>Research Interest:</b> {{ member.research }}<br>{% endif %}
 
 {% if member.website %}<a href="{{ member.website }}" target="_blank"><i class="fa fa-home fa-2x"></i></a> {% endif %}
 {% if member.email %}<a href="mailto:{{ member.email }}" target="_blank"><i class="fa fa-envelope-square fa-2x"></i></a> {% endif %}
@@ -52,7 +52,7 @@ permalink: /members/
 {% endfor %}
 
 {% for member in site.data.team_members %}
-{% if member.role == "researcher" %}
+{% if member.role == "professor" %}
 
 {% assign even_odd = number_printed | modulo: 2 %}
 
@@ -66,7 +66,7 @@ permalink: /members/
 <div class="col-sm-4 col-xs-12">
   <h4>{{ member.name }}</h4>
   <i>{{ member.info }}<br></i>
-  {% if member.research %}<b>Research:</b> {{ member.research }}<br>{% endif %}
+  {% if member.research %}<b>Research Interest:</b> {{ member.research }}<br>{% endif %}
 
 {% if member.website %}<a href="{{ member.website }}" target="_blank"><i class="fa fa-home fa-2x"></i></a> {% endif %}
 {% if member.email %}<a href="mailto:{{ member.email }}" target="_blank"><i class="fa fa-envelope-square fa-2x"></i></a> {% endif %}
@@ -111,7 +111,7 @@ permalink: /members/
 <div class="col-sm-4 col-xs-12">
   <h4>{{ member.name }}</h4>
   <i>{{ member.info }}<br></i>
-  {% if member.research %}<b>Research:</b> {{ member.research }}<br>{% endif %}
+  {% if member.research %}<b>Research Interest:</b> {{ member.research }}<br>{% endif %}
 
 {% if member.website %}<a href="{{ member.website }}" target="_blank"><i class="fa fa-home fa-2x"></i></a> {% endif %}
 {% if member.email %}<a href="mailto:{{ member.email }}" target="_blank"><i class="fa fa-envelope-square fa-2x"></i></a> {% endif %}
