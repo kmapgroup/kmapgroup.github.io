@@ -5,9 +5,7 @@ sitemap: false
 permalink: /members/
 ---
 
-## Members
-
-## Principal Investigator
+## Researchers
 
 {% for member in site.data.pi %}
 
@@ -31,8 +29,6 @@ permalink: /members/
 </div>
 
 {% endfor %}
-
-## Researchers
 
 <div class='jumbotron'>
 {% assign number_printed = 0 %}
