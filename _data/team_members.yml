@@ -57,3 +57,17 @@
   # email: yujin.haley.an@gmail.com
   role: student
   research:
+
+- name: Jae Yeon Kim (김재연)
+  photo: 멤버사진/김재연.png
+  info: Researcher, University of North Carolina, Chapel Hill
+  email: jaeyeonkim@hks.harvard.edu
+  role: professor
+  research:
+
+- name: Donghyun Danny Choi (최동현)
+  photo: 멤버사진/최동현.png
+  info: Researcher, Brown University
+  email: dannychoi@brown.edu
+  role: professor
+  research:
