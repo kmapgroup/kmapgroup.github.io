@@ -36,3 +36,24 @@
   # email: suminyay@korea.ac.kr
   role: student
   research: 정치행태, 정치심리학
+
+- name: Sunkyoung Park (박선경)
+  photo: 멤버사진/박선경.jpg
+  info: Researcher, 고려대학교 글로벌한국융합학부
+  email: sunkyoung_park@korea.ac.kr
+  role: professor
+  research: 한국정치, 이민과 통합, 젠더정치, 민주주의
+
+- name: Hannah Kim (김한나)
+  photo: 멤버사진/김한나.jpg
+  info: Researcher, Korea University
+  email: hannahkim80@gmail.com
+  role: professor
+  research: Affective polarization and voting behavior, with an emphasis on political psychology, survey experiments, and immigrant politics
+
+- name: Yujin An (안유진)
+  photo: 멤버사진/안유진.jpeg
+  info: MA Student, 고려대학교 국제대학원
+  # email: yujin.haley.an@gmail.com
+  role: student
+  research:
