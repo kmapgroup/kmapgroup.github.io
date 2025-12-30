@@ -120,3 +120,40 @@
 - [ ] Events 페이지에 세미나/행사 정보 추가
 - [ ] 배너 이미지 교체 (`/images/banner.jpg`)
 - [ ] Alumni 정보 추가
+
+---
+
+### 2025-12-30: 멤버 추가 및 홈페이지 개선
+
+#### 완료된 작업
+1. **홈페이지 사이드바 개선**
+   - PI 섹션 제거 (사진, 이름, 아이콘, 학력)
+   - News 섹션만 표시
+
+2. **신규 멤버 5명 추가** (Google Form 응답 기반)
+   - Sunkyoung Park (박선경) - Researcher, 고려대학교
+   - Hannah Kim (김한나) - Researcher, Korea University
+   - Yujin An (안유진) - MA Student, 고려대학교
+   - Jae Yeon Kim (김재연) - Researcher, UNC Chapel Hill
+   - Donghyun Danny Choi (최동현) - Researcher, Brown University
+
+#### 현재 멤버 현황
+| 이름 | 역할 | 이메일 공개 |
+|------|------|------------|
+| Woo Chang Kang (강우창) | PI | ✓ |
+| Byoungha Lee (이병하) | Professor | ✓ |
+| Sunkyoung Park (박선경) | Professor | ✓ |
+| Hannah Kim (김한나) | Professor | ✓ |
+| Jae Yeon Kim (김재연) | Professor | ✓ |
+| Donghyun Danny Choi (최동현) | Professor | ✓ |
+| Heedo Lee (이희도) | Student | ✗ |
+| Jiwoon Kim (김지운) | Student | ✗ |
+| Kyungrim Chung (정경림) | Student | ✗ |
+| Sumin Kim (김수민) | Student | ✗ |
+| Yujin An (안유진) | Student | ✗ |
+
+#### 다음 단계 (TODO)
+- [ ] Publications 페이지에 실제 논문 추가
+- [ ] Events 페이지에 세미나/행사 정보 추가
+- [ ] 배너 이미지 교체 (`/images/banner.jpg`)
+- [ ] Alumni 정보 추가
