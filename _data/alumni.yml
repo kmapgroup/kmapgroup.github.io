@@ -1,6 +1,18 @@
 # Alumni data
-# Add alumni using this format:
-# - name: Alumni Name
-#   photo: alumni_photo.jpg
-#   info: Former PhD Student
-#   duration: 2020-2024
+# 필드: name / photo / info / duration
+# duration 예: 2024-2025 (members.md 템플릿이 이름 아래에 표시)
+
+- name: Heedo Lee (이희도)
+  photo: 멤버사진/Lee_heedo.jpeg
+  info: Former MA Student, 연세대학교
+  duration:
+
+- name: Kyungrim Chung (정경림)
+  photo: 멤버사진/주민등록증3.5x4.5cm - Kelly C.jpg
+  info: Former MA Student, 연세대학교
+  duration:
+
+- name: Yujin An (안유진)
+  photo: 멤버사진/안유진.jpeg
+  info: Former MA Student, 고려대학교 국제대학원
+  duration:

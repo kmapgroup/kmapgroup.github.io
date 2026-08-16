@@ -13,6 +13,15 @@ permalink: /members/
 .row {
   margin-bottom: 10px;
 }
+/* 프로필 사진을 원형으로 통일.
+   세로로 긴 증명사진도 정사각으로 잘라 원 안에 담기게 한다.
+   object-position을 위쪽(20%)에 두어 머리가 잘리지 않도록 함. */
+.row img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 50%;
+}
 </style>
 
 ## Researchers

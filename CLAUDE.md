@@ -170,7 +170,7 @@
    - Seoyeon Kim (김서연) - MA Student, 연세대학교
 4. **기존 데이터 보정**: 김재연 이메일 `jaeyeonkim@hks.harvard.edu` → `jaekim@unc.edu` (Form 응답이 최신, 소속과 일치). 박선경·김한나·김재연·이인복에 `website` 필드 추가.
 
-#### 현재 멤버 현황 (13명)
+#### 현재 멤버 현황 (활동 10명 + Alumni 3명)
 | 이름 | 역할 | 이메일 공개 |
 |------|------|------------|
 | Woo Chang Kang (강우창) | PI | ✓ |
@@ -181,12 +181,18 @@
 | Donghyun Danny Choi (최동현) | Professor | ✓ |
 | Inbok Rhee (이인복) | Professor | ✓ |
 | Boram Kim (김보람) | Professor | ✓ (개인 이메일 — 재검토 필요) |
-| Heedo Lee (이희도) | Student | ✗ |
 | Jiwoon Kim (김지운) | Student | ✗ |
-| Kyungrim Chung (정경림) | Student | ✗ |
 | Sumin Kim (김수민) | Student | ✗ |
-| Yujin An (안유진) | Student | ✗ |
 | Seoyeon Kim (김서연) | Student | ✗ |
+
+#### Alumni (2026-08-17 이동)
+`_data/alumni.yml`. `duration`(재직 기간)은 자료가 없어 비어 있음 — 확인되면 채울 것.
+
+| 이름 | 비고 |
+|------|------|
+| Heedo Lee (이희도) | Former MA Student, 연세대학교 |
+| Kyungrim Chung (정경림) | Former MA Student, 연세대학교 |
+| Yujin An (안유진) | Former MA Student, 고려대학교 국제대학원 |
 
 #### 미해결 (다음 세션)
 - [ ] **PII 유출**: `files/KMAP Working Group 멤버 정보 수집 양식(응답).xlsx`가 public repo에 커밋되어 있고 raw.githubusercontent.com으로 실제 다운로드 가능 (이메일 6건 노출). 파일 삭제 vs git 히스토리 재작성 여부 결정 필요.
