@@ -11,10 +11,19 @@ permalink: /
 
 We bring together scholars, researchers, and students interested in understanding the political dimensions of migration in the Korean context.
 
+<style>
+.kmap-slideshow { position: relative; width: 100%; height: 420px; background: #111; border-radius: 8px; overflow: hidden; }
+.kmap-slideshow img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 1s ease-in-out; }
+.kmap-slideshow img.active { opacity: 1; }
+</style>
 <div class="container">
 <div class="row">
 <center>
-<img src="{{ site.url }}{{ site.baseurl }}/images/banner.jpg" width="100%"/><br/>
+<div class="kmap-slideshow">
+{% assign event_photos = site.static_files | where_exp: "f", "f.path contains '/images/event/'" | sort: "path" %}
+{% for f in event_photos %}<img src="{{ f.path | relative_url }}" alt="KMAP event photo"/>
+{% endfor %}
+</div>
 KMAP Working Group - Korea University
 </center>
 </div>
