@@ -1,57 +1,38 @@
 ---
 title: "Research"
 layout: gridlay
-sitemap: false
 permalink: /research/
 ---
 
+{% comment %} Themes: _data/research.yml. Members/publications attach via their `topics` field. {% endcomment %}
+
 <style>
-img{
-  border-radius: 10px;
-}
-.col-md-3 {
-  margin-top:10px;
-  margin-bottom:10px;
-  padding:0px;
-  display:block;
-  overflow:hidden;
-  text-align:center;
-  display: table-cell;
-  background: white;
-  border-radius: 20px;
-  height: auto;
-}
-iframe {
-  margin:0;
-  padding:0;
-  width: 175px;
-  display: inline;
-  vertical-align: middle;
-}
+.theme-card h3 { margin-top: 0; }
+.theme-card .ko { color: #6a6a6a; font-weight: 400; font-size: 1rem; margin-left: .4rem; }
+.theme-card h5 { font-size: 1rem; margin-top: 1rem; margin-bottom: .3rem; color: #6a6a6a; font-weight: 600; }
+.theme-card ul { padding-left: 1.2em; }
 </style>
 
 ## Research
 
-<div class="jumbotron">
-<div class="col-md-12 col-sm-12">
-<h4>Immigration Policy in Korea</h4>
+<p>KMAP studies the politics of migration in and around Korea under the theme <i>Migration Politics for Diversity, Coexistence, and Integration</i>. Our research is organized around four themes.</p>
 
-We study the development and implementation of immigration policies in South Korea, examining how political, economic, and social factors shape policy outcomes.
+{% for t in site.data.research %}
+<div class="jumbotron theme-card" id="{{ t.id }}">
+<h3>{{ t.title }}<span class="ko">{{ t.ko }}</span></h3>
+<p>{{ t.description }}</p>
+{% assign all_members = site.data.pi | concat: site.data.team_members %}
+{% assign tm = all_members | where_exp: "m", "m.topics contains t.id" %}
+{% if tm.size > 0 %}
+<h5>Members</h5>
+<p>{% for m in tm %}<a href="{{ '/members/' | relative_url }}">{{ m.name | split: " (" | first }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+{% endif %}
+{% assign tp = site.data.publications | where_exp: "p", "p.topics contains t.id" %}
+{% if tp.size > 0 %}
+<h5>Selected publications</h5>
+<ul>
+{% for p in tp %}<li>{% include citation.html p=p %}</li>
+{% endfor %}</ul>
+{% endif %}
 </div>
-</div>
-
-<div class="jumbotron">
-<div class="col-md-12 col-sm-12">
-<h4>Public Attitudes toward Immigration</h4>
-
-Our research investigates Korean citizens' attitudes toward immigrants and immigration, exploring the determinants of public opinion and its political consequences.
-</div>
-</div>
-
-<div class="jumbotron">
-<div class="col-md-12 col-sm-12">
-<h4>Comparative Migration Politics in East Asia</h4>
-
-We conduct comparative research on migration politics across East Asian countries, examining similarities and differences in how nations manage immigration and integration.
-</div>
-</div>
+{% endfor %}

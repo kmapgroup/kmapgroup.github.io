@@ -1,0 +1,35 @@
+# Research themes shown on /research/ and on the home page.
+# Members (_data/pi.yml, team_members.yml) and publications (_data/publications.yml)
+# attach to a theme through their `topics: [id, ...]` field.
+- id: attitudes
+  title: Public Attitudes toward Immigration
+  ko: 이민에 대한 태도와 여론
+  description: >-
+    How do Korean citizens form attitudes toward immigrants and immigration, and with what political
+    consequences? We use surveys and survey experiments to examine perceived threat and competition,
+    the role of local demographic structure, and how emerging technologies such as artificial
+    intelligence may reshape attitudes toward immigrants.
+
+- id: participation
+  title: Immigrant Political Participation and Integration
+  ko: 이주민의 정치참여와 사회통합
+  description: >-
+    How do immigrants and multicultural families in Korea engage with politics and society? We study
+    the link between experiences of discrimination and political participation, gaps in perception
+    within multicultural families, and the local politics of multicultural family support policy.
+
+- id: policy
+  title: Immigration Policy and Governance in Korea
+  ko: 한국의 이민정책과 거버넌스
+  description: >-
+    How are immigration policies made and implemented in Korea? We examine the development of
+    Korea's immigration regime, the fragmentation of policy across central-government agencies, and
+    the statistical and fiscal foundations required for evidence-based immigration policy.
+
+- id: comparative
+  title: Comparative and Global Migration Politics
+  ko: 비교·국제 이주정치
+  description: >-
+    How does migration politics in Korea compare with other cases? We compare labor migration policy
+    in Korea and Japan, anti-immigrant discourse in East Asia, refugee and climate migration in the
+    Global South, and the Global North/South divide in migration research itself.

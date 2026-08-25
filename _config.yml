@@ -5,25 +5,24 @@ description: Korean Migration And Politics Working Group
 baseurl: ""
 url: "https://kmapgroup.github.io"
 
-# Google analytics ID: Uncomment and your own, if you like
-# google_analytics: XX
-# google_analytics_4: XXX
-# google_tag_manager: XXX
-
 # Footer info
 affiliation: >
   KMAP Working Group<br/>
   Korean Migration And Politics<br/>
-  Korea University
+  고려대학교 SSK 이민정치연구단<br/>
+  Peace and Democracy Institute, Korea University
 
 location: >
+  Department of Political Science and International Relations<br/>
   Korea University<br/>
-  Department of Political Science<br/>
-  Seoul, Korea
+  145 Anam-ro, Seongbuk-gu, Seoul 02841, Korea
 
 contact: >
-  <a href="mailto:woochang_kang@korea.ac.kr" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact us via email</a> <br/>
-  <a href="https://github.com/kmapgroup"><i class="fa fa-github fa-1x"></i> Visit our GitHub</a>
+  <a href="mailto:woochang_kang@korea.ac.kr"><i class="fa fa-envelope fa-1x"></i> woochang_kang@korea.ac.kr</a><br/>
+  <a href="https://github.com/kmapgroup"><i class="fa fa-github fa-1x"></i> github.com/kmapgroup</a>
+
+funding: >
+  This work was supported by the National Research Foundation of Korea (NRF) under the Social Science Korea (SSK) program.
 
 # Pages shown in navbar
 nav_pages:

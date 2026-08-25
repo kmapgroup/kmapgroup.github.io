@@ -12,6 +12,7 @@
 #   doi     : 10.xxxx/...                 (optional → link)
 #   url     : alternative link            (optional)
 #   note    : free text, e.g. "Forthcoming" (optional)
+#   topics  : research-theme ids from _data/research.yml (optional; shown on /research/)
 #
 # Order within a year = order in this file (newest first).
 
@@ -30,6 +31,7 @@
   title: "선거 관리 업무의 현장 경험은 부정선거 인식을 바꾸는가?"
   venue: "한국정당학회보"
   volume: "25(1)"
+  doi: 10.30992/kpsr.2026.3.25.1.159
 
 - type: article
   year: 2025
@@ -38,6 +40,7 @@
   title: "선거는 정치적 양극화를 해소하는가?: 2025년 한국 대통령 선거를 전후한 양극화 인식 변화"
   venue: "한국정치학회보"
   volume: "59(4)"
+  doi: 10.18854/kpsr.2025.59.4.006
 
 - type: article
   year: 2025
@@ -45,6 +48,7 @@
   authors: "Rogbeer, K. G., Kim, J. Y., &amp; P&eacute;rez, E."
   title: "Is Unity Durable Among People of Color? Two Large Experiments Stress-Testing Solidarity Between Black and Latino Americans"
   venue: "Group Processes &amp; Intergroup Relations"
+  doi: 10.1177/13684302251346402
 
 - type: article
   year: 2025
@@ -53,6 +57,7 @@
   title: "Anti-Asian Hate Crimes and American Reputation"
   venue: "British Journal of Political Science"
   volume: "55, e77"
+  doi: 10.1017/S0007123424001030
 
 - type: article
   year: 2025
@@ -61,6 +66,7 @@
   title: "2024년 미국대선에서의 경제투표: 경제성과와 인종구성이 선거결과에 미친 영향"
   venue: "현대정치연구"
   volume: "18(1)"
+  doi: 10.52594/jcp.2025.04.18.1.s.157
 
 - type: article
   year: 2025
@@ -68,6 +74,7 @@
   authors: "Kim, J. Y., P&eacute;rez, E., &amp; Rogbeer, K. G."
   title: "Solidarity Between People of Color: Two Blockage Experiments Suggest It Is Causal and Resistant to a Divisive Threat"
   venue: "Journal of Experimental Political Science"
+  doi: 10.1017/xps.2025.3
 
 - type: article
   year: 2025
@@ -76,6 +83,7 @@
   title: "What Do Aid Recipients Want? Public Attitudes Toward Foreign Aid in Developing Countries"
   venue: "World Development"
   volume: "186, 106815"
+  doi: 10.1016/j.worlddev.2024.106815
 
 - type: article
   year: 2025
@@ -85,6 +93,7 @@
   venue: "International Interactions"
   volume: "51(1)"
   pages: "121&ndash;137"
+  doi: 10.1080/03050629.2025.2456738
 
 # ---------------------------------------------------------------------- books
 - type: book
@@ -93,3 +102,4 @@
   authors: "이병하, 장승진, 한경준"
   title: "국제 이주의 정치학"
   venue: "푸른길"
+  topics: [comparative]

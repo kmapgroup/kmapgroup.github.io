@@ -1,0 +1,38 @@
+// KMAP theme: Korea University design tokens mapped onto Bootstrap 5 variables.
+// Crimson-on-white, Pretendard, soft radii, one hairline tone. Loaded before bootstrap.
+$primary:        #8a1538;   // KU crimson (PANTONE 202C sRGB bridge)
+$secondary:      #6a6a6a;
+$body-bg:        #ffffff;
+$body-color:     #222222;
+$link-color:     $primary;
+$link-hover-color: #6e0f2b;
+$link-decoration: none;
+$link-hover-decoration: underline;
+
+$font-family-sans-serif: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Apple SD Gothic Neo", "Noto Sans KR", Arial, sans-serif;
+$font-size-base:   1.0625rem;   // 17px
+$headings-font-weight: 600;
+$headings-color:   #222222;
+$h1-font-size:     2.25rem;
+$h2-font-size:     1.75rem;
+$h3-font-size:     1.4rem;
+$h4-font-size:     1.2rem;
+$h5-font-size:     1.05rem;
+
+$border-color:     #dddddd;
+$border-radius:    .5rem;      // 8px
+$border-radius-lg: .875rem;    // 14px
+$enable-shadows:   false;
+
+$navbar-light-color:        #3f3f3f;
+$navbar-light-hover-color:  $primary;
+$navbar-light-active-color: $primary;
+$navbar-light-brand-color:  $primary;
+$navbar-light-brand-hover-color: #6e0f2b;
+
+$nav-tabs-border-color:             #dddddd;
+$nav-tabs-link-active-color:        $primary;
+$nav-tabs-link-active-bg:           #ffffff;
+$nav-tabs-link-active-border-color: #dddddd #dddddd #ffffff;
+$nav-link-color:                    #3f3f3f;
+$nav-link-hover-color:              $primary;

@@ -1,33 +1,38 @@
 # Team members data
 # role: professor or student
+# topics: research-theme ids from _data/research.yml (tentative tagging by site maintainer; members may revise)
 # email: 공개 대상만 기재 (학생 이메일은 저장하지 않음 — public repo이므로 주석 처리해도 노출됨)
 
 - name: Byoungha Lee (이병하)
   photo: 멤버사진/이병하 증명사진_2021 - Byoungha Lee.jpg
-  info: Researcher, 서울시립대학교 국제관계학과
+  info: Researcher, Department of International Relations, University of Seoul
   email: byoungha@uos.ac.kr
   role: professor
-  research: 이민정책 비교, 이민국가 이론
+  research: Comparative immigration policy, Theories of the migration state
+  topics: [policy, comparative]
 
 - name: Jiwoon Kim (김지운)
   photo: 멤버사진/김지운_증명 - Jiwoon Kim (Jun Kim).jpg
-  info: PhD Student, 연세대학교
+  info: PhD Student, Yonsei University
   role: student
   research: International Relations, Chinese Politics, Public Opinion & Political Psychology, Migration & Diaspora Politics
+  topics: [comparative]
 
 - name: Sumin Kim (김수민)
   photo: 멤버사진/IMG_0773 - 김수민.jpeg
-  info: MA Student, 고려대학교 정치외교학과
+  info: MA Student, Department of Political Science and International Relations, Korea University
   role: student
-  research: 정치행태, 정치심리학
+  research: Political behavior, Political psychology
+  topics: [attitudes]
 
 - name: Sunkyoung Park (박선경)
   photo: 멤버사진/박선경.jpg
-  info: Researcher, 고려대학교 글로벌한국융합학부
+  info: Researcher, Division of Global Korean Studies, Korea University
   email: sunkyoung_park@korea.ac.kr
   website: https://faculty.korea.ac.kr/kufaculty/sunkyoungpark/index.do
   role: professor
-  research: 한국정치, 이민과 통합, 젠더정치, 민주주의
+  research: Korean politics, Immigration and integration, Gender politics, Democracy
+  topics: [participation, policy]
 
 - name: Hannah Kim (김한나)
   photo: 멤버사진/김한나.jpg
@@ -36,6 +41,7 @@
   website: https://sites.google.com/view/hannahkim-umn
   role: professor
   research: Affective polarization and voting behavior, with an emphasis on political psychology, survey experiments, and immigrant politics
+  topics: [attitudes, participation]
 
 - name: Jae Yeon Kim (김재연)
   photo: 멤버사진/김재연.png
@@ -43,14 +49,15 @@
   email: jaekim@unc.edu
   website: https://jaeyk.github.io/
   role: professor
-  research: 미국정치, 공공정책, 정치조직, 데이터 과학
+  research: American politics, Public policy, Political organizations, Data science
+  topics: [attitudes]
 
 - name: Donghyun Danny Choi (최동현)
   photo: 멤버사진/최동현.png
   info: Researcher, Brown University
   email: dannychoi@brown.edu
   role: professor
-  research:
+  topics: [attitudes, comparative]
 
 - name: Inbok Rhee (이인복)
   photo: 멤버사진/이인복.jpeg
@@ -59,6 +66,7 @@
   website: https://inbokrhee.com/
   role: professor
   research: African politics, Political economy of development
+  topics: [comparative]
 
 - name: Boram Kim (김보람)
   photo: 멤버사진/김보람.jpg
@@ -66,9 +74,11 @@
   email: patriot5@naver.com
   role: professor
   research: International Relations, Energy Politics, Environmental Politics, International Migration
+  topics: [comparative, participation]
 
 - name: Seoyeon Kim (김서연)
   photo: 멤버사진/김서연.jpg
-  info: MA Student, 연세대학교
+  info: MA Student, Yonsei University
   role: student
-  research: 국제기구, 이민정치, 아프리카정치
+  research: International organizations, Migration politics, African politics
+  topics: [comparative, policy]

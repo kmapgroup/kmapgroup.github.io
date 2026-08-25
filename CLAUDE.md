@@ -23,12 +23,17 @@
 | `_pages/members.md` | 멤버 페이지 템플릿 |
 | `/images/멤버사진/` | 멤버 프로필 사진 |
 | `_data/events.yml` | 이벤트 데이터 (seminar / conference 두 탭, `_pages/events.md`가 렌더) |
+| `_data/research.yml` | 연구 주제 4개 (id·title·ko·description). 멤버·논문의 `topics: [id]`로 연결 → `/research/`·홈에 표시 |
 | `_data/publications.yml` | 논문·저서 데이터 (`_pages/publications.md` + `_includes/citation.html`이 렌더). 평탄 스키마 — Google Sheet 열로 1:1 대응 가능 |
 | `images/posters_seminar/`, `files/posters/` | 세미나 포스터 JPG / PDF |
 | `images/poster_conference/` | 학회 포스터·세션 프로그램 이미지 |
 | `images/event_mainpage/` | 홈 슬라이드쇼 사진 (폴더 내 파일 자동 순회, `assets/javascript/slideshow.js`) |
 
 ## Technical Notes
+- **테마 (2026-08-26)**: Bootstrap 5 소스(`_sass/bootstrap/`) + KU 디자인 토큰(`_sass/_kmap_variables.scss`: 크림슨 #8a1538, Pretendard, 17px, 8/14px radius) + 사이트 스타일(`_sass/SHB_css.scss`). 구 Bootswatch Darkly(`_sass/bootstrap.scss`)는 제거. `.jumbotron`은 SHB_css에서 카드로 정의.
+- **로고/파비콘/OG**: `images/kmap-mark.png`, `favicon.ico`, `apple-touch-icon.png`, `images/og-image.png` — Pillow + Pretendard OTF(jsDelivr)로 생성. 공식 로고 파일을 받으면 교체.
+- **로컬 빌드**: `BUNDLE_PATH=vendor/bundle bundle exec jekyll build --config _config.yml,<plugins: [] 오버라이드>` (jekyll-sitemap은 Gemfile에 없어 검증 빌드에서만 비활성). Sass deprecation 경고는 무시.
+- 템플릿 잔재(예제 포스트·논문·talkmap·펀더 로고·미사용 레이아웃·analytics/mathjax include·Docker 파일 등 68개)는 2026-08-26 제거.
 - GitHub Pages는 `jekyll-scholar` 플러그인 지원 안 함
 - `jekyll-sitemap` 플러그인만 사용
 - bibliography 태그 사용 금지 (빌드 오류 발생)
@@ -234,3 +239,27 @@
 - [ ] events.yml 학회 항목의 비멤버 인명 로마자·번역 제목 확인
 - [ ] 2026 KPSA 패널 날짜(8/18)는 사진 파일명 기준 — 프로그램북으로 확인
 - [ ] 8/17 잔여: GitHub Support 고아 객체 정리, Alumni duration, 최동현 등록 유지 여부, 김보람 이메일, 멤버 사진 파일명 정리
+
+---
+
+### 2026-08-26: 디자인 전면 개편 (라이트 테마·정체성·데이터 연결)
+
+#### 완료된 작업
+1. **테마**: Darkly 다크 → 라이트 + KU 크림슨(`korea-university-design` 토큰). 네비게이션 흰 배경·활성 밑줄, 카드 hairline, 푸터 재구성(About/Contact/Address + NRF SSK 지원 문구).
+2. **정체성**: KMAP 마크(크림슨 K)·파비콘·OG 이미지 생성. 홈·푸터에 "고려대학교 SSK 이민정치연구단 / Peace and Democracy Institute" 및 SSK 지원 명시. 홈 문안을 학술체(느낌표 없음)로 재작성.
+3. **Research**: `_data/research.yml` 4개 주제(태도·참여/통합·정책·비교/국제) — 멤버 `topics` 태그로 자동 연결. 홈 연구주제 목록도 동일 데이터에서 생성(앵커 링크).
+4. **Events**: 카드 마크업을 `_includes/event_card.html`로 분리. Upcoming/Past를 `site.time` 기준 자동 분류(빌드 시점 기준 — push 후 갱신).
+5. **홈 슬라이드쇼 캡션**: 사진 파일명 날짜(YYYYMMDD)를 `events.yml`의 `sort`와 대조해 행사명·날짜 오버레이. 모바일은 `cover`.
+6. **Publications**: Crossref로 DOI 8건 확인·링크 (Political Behavior 2026은 미등록). 
+7. **Members 영어 통일**: 한글 소속·관심사를 영역(번역은 관리자 판단). Alumni "Role:" 라벨 제거.
+8. `sitemap: false` 제거(4페이지), og/twitter 메타, GA/GTM/MathJax placeholder 제거.
+
+#### 확인·검토 필요 (추정 포함)
+- [ ] **NRF/SSK 지원 문구**: "This work was supported by the National Research Foundation of Korea (NRF) under the Social Science Korea (SSK) program." — 협약서 요구 문구(과제번호 포함 여부)로 교체
+- [ ] **멤버 `topics` 태그**는 관리자 추정(연구 관심사·발표 주제 기준) — 특히 최동현(관심사 미기재, attitudes/comparative로 태그). 멤버에게 확인
+- [ ] 멤버 소속·관심사 영역(예: 글로벌한국융합학부 → Division of Global Korean Studies) 확인
+- [ ] 주소 "145 Anam-ro, Seongbuk-gu, Seoul 02841"는 고려대 본교 주소 — 학과 우편 주소로 교체 여부
+- [ ] 슬라이드 캡션 없는 사진 6장: 날짜 불일치 2장(`20251229`↔행사 12/19, `20260626`↔행사 6/25 — 파일명 또는 events.yml 중 하나 수정) + **events.yml에 없는 2026년 행사 4건**(2/4 와세다 세미나, 2/9 콜로키움 장영욱, 4/30 콜로키움 한경준, 7/22 안산시 외국인주민지원본부 워크숍) — 행사 정보·포스터 받아 추가
+- [ ] 정경림 사진 파일(`주민등록증3.5x4.5cm - Kelly C.jpg`) 교체 (파일명 개인정보 + 원형 크롭 시 테두리 노출)
+- [ ] Working Papers / Conference Papers 섹션 채우기 (`publications.yml`에 `type: working|conference`)
+- [ ] 공식 로고가 있으면 `images/kmap-mark.png` 교체
