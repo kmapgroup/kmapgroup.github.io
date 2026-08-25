@@ -1,11 +1,13 @@
 <div class="jumbotron">
   <h4>News</h4>
 
-  {% for article in site.data.news limit:3 %}
-  <b>{{ article.date }}</b>
-    <p>{{ article.headline }}</p>
+  {% comment %} Latest events, newest first, from _data/events.yml (single source of truth). {% endcomment %}
+  {% assign recent_events = site.data.events | sort: "sort" | reverse %}
+  {% for e in recent_events limit:5 %}
+  <b>{{ e.date }}</b>
+    <p><a href="{{ "/events/#" | append: e.category | append: "s" | relative_url }}">{{ e.title }}</a></p>
   {% endfor %}
-  
-  <h5><a href="{{ site.url }}{{ site.baseurl }}/allnews.html">... see all News</a></h5>
+
+  <h5><a href="{{ "/events/" | relative_url }}">... see all Events</a></h5>
 
 </div>
