@@ -20,7 +20,7 @@ We bring together scholars, researchers, and students interested in understandin
 <div class="row">
 <center>
 <div class="kmap-slideshow">
-{% assign event_photos = site.static_files | where_exp: "f", "f.path contains '/images/event/'" | sort: "path" %}
+{% assign event_photos = site.static_files | where_exp: "f", "f.path contains '/images/event_mainpage/'" | sort: "path" %}
 {% for f in event_photos %}<img src="{{ f.path | relative_url }}" alt="KMAP event photo"/>
 {% endfor %}
 </div>
