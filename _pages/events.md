@@ -7,7 +7,8 @@ permalink: /events/
 
 <style>
 /* 이벤트 항목: 왼쪽 설명 / 오른쪽 포스터 2단.
-   좁은 화면(col-sm 미만)에서는 Bootstrap이 자동으로 세로로 쌓는다. */
+   좁은 화면(col-sm 미만)에서는 Bootstrap이 자동으로 세로로 쌓는다.
+   데이터는 _data/events.yml — 행사 추가는 그 파일에 항목을 추가하면 된다. */
 .event-poster img {
   width: 100%;
   border: 1px solid #ddd;
@@ -18,6 +19,7 @@ permalink: /events/
   margin-top: 6px;
   font-size: 0.9em;
 }
+.event-poster .program-image { margin-top: 10px; }
 .event-meta {
   color: #555;
   font-size: 0.95em;
@@ -28,6 +30,12 @@ permalink: /events/
 .jumbotron h4 {
   margin-top: 0;
 }
+.event-panel { margin-top: 1em; }
+.event-panel h5 { margin-bottom: 0.3em; font-size: 1.05em; }
+.event-panel ul { padding-left: 1.2em; margin-bottom: 0.4em; }
+.event-panel li { margin-bottom: 0.3em; }
+#eventTabs { margin-bottom: 1.2em; }
+#eventTabs .nav-link { font-size: 1.1em; }
 </style>
 
 ## Events
@@ -40,184 +48,68 @@ permalink: /events/
 
 ### Past Events
 
-<h3>2025</h3>
+<ul class="nav nav-tabs" id="eventTabs" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#seminars" type="button" role="tab" aria-controls="seminars" aria-selected="true">Seminars</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#conferences" type="button" role="tab" aria-controls="conferences" aria-selected="false">Conferences</button>
+  </li>
+</ul>
 
+<div class="tab-content">
+{% assign categories = "seminar,conference" | split: "," %}
+{% for cat in categories %}
+{% assign items = site.data.events | where: "category", cat | sort: "sort" | reverse %}
+{% assign years = items | map: "year" | uniq %}
+<div class="tab-pane fade{% if forloop.first %} show active{% endif %}" id="{{ cat }}s" role="tabpanel">
+{% for y in years %}
+<h3>{{ y }}</h3>
+{% assign year_items = items | where: "year", y %}
+{% for e in year_items %}
 <div class="jumbotron">
-<h4>KMAP 7th Invited Expert Colloquium</h4>
+<h4>{{ e.title }}</h4>
 <div class="row">
-<div class="col-sm-8">
-<p class="event-meta"><i>Colloquium</i> &middot; November 24, 2025<br>Conference Room 326, Sangnam Jeonggyeonggwan, Korea University</p>
-<p><b>Jongkwan Lee</b><br><span class="event-affil">Department of Economics, Yonsei University</span><br>
-&ldquo;Immigrant Inflows and Changes in Our Society&rdquo;</p>
-<p>The talk examines the economic and socio-cultural effects of immigrant inflows in Korea, highlighting productivity gains and limited adverse labor-market impacts for natives.</p>
+<div class="{% if e.poster %}col-sm-8{% else %}col-sm-12{% endif %}">
+<p class="event-meta"><i>{{ e.type }}</i> &middot; {{ e.date }}<br>{{ e.venue }}</p>
+{% if e.speaker %}
+<p><b>{{ e.speaker }}</b><br><span class="event-affil">{{ e.affiliation }}</span><br>
+&ldquo;{{ e.talk }}&rdquo;</p>
+{% endif %}
+{% if e.summary %}<p>{{ e.summary }}</p>{% endif %}
+{% for p in e.panels %}
+<div class="event-panel">
+<h5>{{ p.title }}</h5>
+<p class="event-meta">{% if p.slot %}{{ p.slot }}{% endif %}{% if p.chair %}{% if p.slot %} &middot; {% endif %}Chair: {{ p.chair }}{% endif %}</p>
+<ul>
+{% for paper in p.papers %}<li>{{ paper.authors }}, &ldquo;{{ paper.title }}&rdquo;</li>
+{% endfor %}</ul>
+{% if p.note %}<p>{{ p.note }}</p>{% endif %}
+{% if p.discussants %}<p class="event-meta">Discussants: {{ p.discussants }}</p>{% endif %}
 </div>
+{% endfor %}
+</div>
+{% if e.poster %}
 <div class="col-sm-4 event-poster">
-<a href="{{ site.url }}{{ site.baseurl }}/files/posters/kmap-7th-20251124.pdf" target="_blank">
-<img src="{{ site.url }}{{ site.baseurl }}/images/posters/kmap-7th-20251124.jpg" alt="Poster for KMAP 7th Invited Expert Colloquium">
+{% if e.poster_pdf %}{% assign poster_href = "/files/" | append: e.poster_pdf | relative_url %}{% else %}{% assign poster_href = "/images/" | append: e.poster | relative_url %}{% endif %}
+<a href="{{ poster_href }}" target="_blank">
+<img src="{{ "/images/" | append: e.poster | relative_url }}" alt="Poster for {{ e.title | strip_html }}">
 </a>
-<a href="{{ site.url }}{{ site.baseurl }}/files/posters/kmap-7th-20251124.pdf" target="_blank" class="poster-link"><i class="fa fa-file-pdf-o"></i> Poster (PDF)</a>
-</div>
-</div>
-</div>
-
-<div class="jumbotron">
-<h4>KMAP 6th Invited Expert Colloquium</h4>
-<div class="row">
-<div class="col-sm-8">
-<p class="event-meta"><i>Colloquium</i> &middot; November 20, 2025<br>Small Theater, B2, 4.18 Memorial Hall, Korea University</p>
-<p><b>Yoshikuni Ono</b><br><span class="event-affil">Political Science, Waseda University</span><br>
-&ldquo;Public Demand for Police Discrimination: How Misperceptions Drive Support for Biased Policing in Japan&rdquo;</p>
-<p>Effective reform should pair internal measures (training/oversight) with public information on crime statistics, media guidelines, and civic education to reduce demand for biased policing.</p>
-</div>
-<div class="col-sm-4 event-poster">
-<a href="{{ site.url }}{{ site.baseurl }}/files/posters/kmap-6th-20251120.pdf" target="_blank">
-<img src="{{ site.url }}{{ site.baseurl }}/images/posters/kmap-6th-20251120.jpg" alt="Poster for KMAP 6th Invited Expert Colloquium">
+{% if e.poster_pdf %}<a href="{{ poster_href }}" target="_blank" class="poster-link"><i class="fa fa-file-pdf-o"></i> Poster (PDF)</a>{% endif %}
+{% for p in e.panels %}{% if p.image %}
+<a href="{{ "/images/" | append: p.image | relative_url }}" target="_blank" class="program-image d-block">
+<img src="{{ "/images/" | append: p.image | relative_url }}" alt="Program for {{ p.title | strip_html }}">
 </a>
-<a href="{{ site.url }}{{ site.baseurl }}/files/posters/kmap-6th-20251120.pdf" target="_blank" class="poster-link"><i class="fa fa-file-pdf-o"></i> Poster (PDF)</a>
+{% endif %}{% endfor %}
+</div>
+{% endif %}
 </div>
 </div>
+{% endfor %}
+{% endfor %}
 </div>
-
-<div class="jumbotron">
-<h4>Lecture</h4>
-<div class="row">
-<div class="col-sm-8">
-<p class="event-meta"><i>Invited Lecture</i> &middot; October 27, 2025<br>#521, SK Future Hall, Korea University</p>
-<p><b>Taeyoung Kang</b><br><span class="event-affil">UnderScore</span><br>
-&ldquo;How Are Research and Knowledge Work (Already) Being Automated?&rdquo;</p>
-<p>This lecture explores how research and knowledge work are already being automated with large language models, showcasing Underscore's applied NLP and computational social science workflows.</p>
+{% endfor %}
 </div>
-<div class="col-sm-4 event-poster">
-<a href="{{ site.url }}{{ site.baseurl }}/files/posters/lecture-20251027.pdf" target="_blank">
-<img src="{{ site.url }}{{ site.baseurl }}/images/posters/lecture-20251027.jpg" alt="Poster for Lecture">
-</a>
-<a href="{{ site.url }}{{ site.baseurl }}/files/posters/lecture-20251027.pdf" target="_blank" class="poster-link"><i class="fa fa-file-pdf-o"></i> Poster (PDF)</a>
-</div>
-</div>
-</div>
-
-<div class="jumbotron">
-<h4>KMAP 5th Invited Expert Colloquium</h4>
-<div class="row">
-<div class="col-sm-8">
-<p class="event-meta"><i>Colloquium</i> &middot; October 24, 2025<br>Conference Room 326, Sangnam Jeonggyeonggwan, Korea University</p>
-<p><b>Minyi Yoo</b><br><span class="event-affil">Migration Research &amp; Training Centre</span><br>
-&ldquo;Building and Utilizing Foundational Data for Immigration Fiscal Analysis&rdquo;</p>
-<p>Introducing practical ways to build and use foundational data for immigration fiscal analysis, and showing how systematic budget analysis can support evidence-based policy decisions, transparency, and long-term fiscal planning under alternative immigration scenarios.</p>
-</div>
-<div class="col-sm-4 event-poster">
-<a href="{{ site.url }}{{ site.baseurl }}/files/posters/kmap-5th-20251024.pdf" target="_blank">
-<img src="{{ site.url }}{{ site.baseurl }}/images/posters/kmap-5th-20251024.jpg" alt="Poster for KMAP 5th Invited Expert Colloquium">
-</a>
-<a href="{{ site.url }}{{ site.baseurl }}/files/posters/kmap-5th-20251024.pdf" target="_blank" class="poster-link"><i class="fa fa-file-pdf-o"></i> Poster (PDF)</a>
-</div>
-</div>
-</div>
-
-<div class="jumbotron">
-<h4>Lecture</h4>
-<div class="row">
-<div class="col-sm-12">
-<p class="event-meta"><i>Invited Lecture</i> &middot; August 28, 2025<br>#222, Building 1, College of Social Sciences, Kangwon National University</p>
-<p><b>Younghoon Song</b><br><span class="event-affil">Kangwon Institute for Unification Studies, Kangwon National University</span><br>
-&ldquo;New Patterns of the Refugee Crisis and the International Community's Response&rdquo;</p>
-<p>The talk examines why the global refugee crisis is expanding and becoming protracted, why conflicts emerge around refugees, and what policy and institutional responses the international community can pursue, drawing on key debates in forced-migration research.</p>
-</div>
-</div>
-</div>
-
-<div class="jumbotron">
-<h4>KMAP&ndash;Gender Politics Research Group Joint Seminar Series</h4>
-<div class="row">
-<div class="col-sm-8">
-<p class="event-meta"><i>Special Seminar</i> &middot; May 9, 2025<br>#421, SK Future Hall, Korea University</p>
-<p><b>Charles Crabtree</b><br><span class="event-affil">Department of Government, Dartmouth College</span><br>
-&ldquo;Can AI Help Reduce Prejudice? Evaluating the Effectiveness of AI-Powered Personalized Persuasion on Support for Transgender Rights&rdquo;</p>
-<p>This talk asks whether AI-powered, personalized conversations can reduce prejudice at scale, and presents evidence that a brief chatbot dialogue tailored to individuals' moral values can modestly increase support for transgender rights, with effects that attenuate over time.</p>
-</div>
-<div class="col-sm-4 event-poster">
-<a href="{{ site.url }}{{ site.baseurl }}/files/posters/joint-seminar-20250509.pdf" target="_blank">
-<img src="{{ site.url }}{{ site.baseurl }}/images/posters/joint-seminar-20250509.jpg" alt="Poster for KMAP&ndash;Gender Politics Research Group Joint Seminar Series">
-</a>
-<a href="{{ site.url }}{{ site.baseurl }}/files/posters/joint-seminar-20250509.pdf" target="_blank" class="poster-link"><i class="fa fa-file-pdf-o"></i> Poster (PDF)</a>
-</div>
-</div>
-</div>
-
-<div class="jumbotron">
-<h4>KMAP 4th Invited Expert Colloquium</h4>
-<div class="row">
-<div class="col-sm-8">
-<p class="event-meta"><i>Colloquium</i> &middot; April 18, 2025<br>#508, Sangnam Jeonggyeonggwan, Korea University</p>
-<p><b>Changwon Lee</b><br><span class="event-affil">Migration Research &amp; Training Centre</span><br>
-&ldquo;Key Terms and Statistics in Immigration Policy&rdquo;</p>
-<p>The talk calls for stronger statistical capacity and governance: digitized administrative inputs, cross-agency collaboration, wider micro-data access, and standardized migration items across major surveys.</p>
-</div>
-<div class="col-sm-4 event-poster">
-<a href="{{ site.url }}{{ site.baseurl }}/files/posters/kmap-4th-20250418.pdf" target="_blank">
-<img src="{{ site.url }}{{ site.baseurl }}/images/posters/kmap-4th-20250418.jpg" alt="Poster for KMAP 4th Invited Expert Colloquium">
-</a>
-<a href="{{ site.url }}{{ site.baseurl }}/files/posters/kmap-4th-20250418.pdf" target="_blank" class="poster-link"><i class="fa fa-file-pdf-o"></i> Poster (PDF)</a>
-</div>
-</div>
-</div>
-
-<div class="jumbotron">
-<h4>KMAP 3rd Invited Expert Colloquium</h4>
-<div class="row">
-<div class="col-sm-8">
-<p class="event-meta"><i>Colloquium</i> &middot; February 7, 2025<br>#619, Sangnam Jeonggyeonggwan, Korea University</p>
-<p><b>Hyemin Park</b><br><span class="event-affil">NEWWAYS</span><br>
-&ldquo;Why Good Politicians Fail to Emerge: A Political System Perspective&rdquo;</p>
-<p>The talk calls for systemic and cultural reforms that nurture talent and enable real-world problem solving. It introduces NewWays' approach: support young candidates, engage 2030 voters, and research diversity-friendly institutions.</p>
-</div>
-<div class="col-sm-4 event-poster">
-<a href="{{ site.url }}{{ site.baseurl }}/files/posters/kmap-3rd-20250207.pdf" target="_blank">
-<img src="{{ site.url }}{{ site.baseurl }}/images/posters/kmap-3rd-20250207.jpg" alt="Poster for KMAP 3rd Invited Expert Colloquium">
-</a>
-<a href="{{ site.url }}{{ site.baseurl }}/files/posters/kmap-3rd-20250207.pdf" target="_blank" class="poster-link"><i class="fa fa-file-pdf-o"></i> Poster (PDF)</a>
-</div>
-</div>
-</div>
-
-<div class="jumbotron">
-<h4>KMAP 2nd Invited Expert Colloquium</h4>
-<div class="row">
-<div class="col-sm-8">
-<p class="event-meta"><i>Colloquium</i> &middot; January 3, 2025<br>Conference Room 326, Sangnam Jeonggyeonggwan, Korea University</p>
-<p><b>John Kuk (Seung-min Kuk)</b><br><span class="event-affil">Department of Political Science, Michigan State University</span><br>
-&ldquo;The Economic Origins of Racial Attitudes Polarization&rdquo;</p>
-<p>This colloquium examines whether economic distress causally increases racial resentment and ethnocentric attitudes. It argues that economic hardship can activate in-group identification and out-group bias, thereby shaping racial attitudes.</p>
-</div>
-<div class="col-sm-4 event-poster">
-<a href="{{ site.url }}{{ site.baseurl }}/files/posters/kmap-2nd-20250103.pdf" target="_blank">
-<img src="{{ site.url }}{{ site.baseurl }}/images/posters/kmap-2nd-20250103.jpg" alt="Poster for KMAP 2nd Invited Expert Colloquium">
-</a>
-<a href="{{ site.url }}{{ site.baseurl }}/files/posters/kmap-2nd-20250103.pdf" target="_blank" class="poster-link"><i class="fa fa-file-pdf-o"></i> Poster (PDF)</a>
-</div>
-</div>
-</div>
-
-<h3>2024</h3>
-
-<div class="jumbotron">
-<h4>KMAP 1st Invited Expert Colloquium</h4>
-<div class="row">
-<div class="col-sm-8">
-<p class="event-meta"><i>Colloquium</i> &middot; December 26, 2024<br>Conference Room 326, Sangnam Jeonggyeonggwan, Korea University</p>
-<p><b>Dong-Hoon Seol</b><br><span class="event-affil">Department of Sociology, Jeonbuk National University</span><br>
-&ldquo;The Politics of Immigration in Korea: Labor Markets, Public Opinion, and Immigration Policy&rdquo;</p>
-<p>This colloquium presentation reviews recent changes in Korea's laws, institutions, and policy frameworks related to migrants, with particular attention to the current administration's approach to foreign nationals. It further examines Korea's demographic and labor market challenges and discusses key factors driving recent inflows of foreign residents.</p>
-</div>
-<div class="col-sm-4 event-poster">
-<a href="{{ site.url }}{{ site.baseurl }}/files/posters/kmap-1st-20241226.pdf" target="_blank">
-<img src="{{ site.url }}{{ site.baseurl }}/images/posters/kmap-1st-20241226.jpg" alt="Poster for KMAP 1st Invited Expert Colloquium">
-</a>
-<a href="{{ site.url }}{{ site.baseurl }}/files/posters/kmap-1st-20241226.pdf" target="_blank" class="poster-link"><i class="fa fa-file-pdf-o"></i> Poster (PDF)</a>
-</div>
-</div>
-</div>
-
 
 ### Regular Seminars
 
@@ -225,3 +117,5 @@ permalink: /events/
 <p>KMAP Working Group holds regular seminars on migration politics.</p>
 <p>For more information about our seminars or to present your research, please contact us at <a href="mailto:woochang_kang@korea.ac.kr">woochang_kang@korea.ac.kr</a></p>
 </div>
+
+<script src="{{ "/assets/javascript/events-tabs.js" | relative_url }}"></script>

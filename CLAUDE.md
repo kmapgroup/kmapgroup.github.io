@@ -22,6 +22,10 @@
 | `_data/alumni.yml` | 졸업생 정보 |
 | `_pages/members.md` | 멤버 페이지 템플릿 |
 | `/images/멤버사진/` | 멤버 프로필 사진 |
+| `_data/events.yml` | 이벤트 데이터 (seminar / conference 두 탭, `_pages/events.md`가 렌더) |
+| `images/posters_seminar/`, `files/posters/` | 세미나 포스터 JPG / PDF |
+| `images/poster_conference/` | 학회 포스터·세션 프로그램 이미지 |
+| `images/event_mainpage/` | 홈 슬라이드쇼 사진 (폴더 내 파일 자동 순회, `assets/javascript/slideshow.js`) |
 
 ## Technical Notes
 - GitHub Pages는 `jekyll-scholar` 플러그인 지원 안 함
@@ -62,6 +66,15 @@
 1. 사진 파일 → `/images/멤버사진/` 폴더에 저장
 2. `_data/team_members.yml` 수정
 3. Git commit & push
+
+---
+
+## 이벤트 추가 규칙 (2026-08-25)
+- `_pages/events.md`는 템플릿만 — **내용은 `_data/events.yml`에 항목 추가**. 필드 설명은 파일 상단 주석.
+- `category: seminar | conference`로 탭 결정. `sort: YYYY-MM-DD`로 최신순 정렬, `year`로 연도 헤딩.
+- 포스터: 세미나 `images/posters_seminar/` (+PDF `files/posters/`), 학회 `images/poster_conference/`. 파일명은 ASCII (한글·공백·괄호 금지).
+- 탭은 Bootstrap 5 nav-tabs, URL 해시(`/events/#conferences`)로 직접 열림 (`assets/javascript/events-tabs.js`).
+- 사진 업로드 전 EXIF(GPS) 제거·가로 1600px 축소 (Pillow). 원본 iPhone 사진 4장에서 GPS가 발견된 적 있음.
 
 ---
 
@@ -159,7 +172,7 @@
 
 ---
 
-### 2026-08-17: 신규 멤버·Publications·Events 반영 (커밋 대기 중)
+### 2026-08-17: 신규 멤버·Publications·Events 반영
 
 #### 완료된 작업
 1. **Publications 페이지 채움**: 논문 9편(2025~2026, 연도별) + 저서 1권(『국제 이주의 정치학』) 반영. PDF는 올리지 않고 서지만 기재(저작권 우려).
@@ -194,12 +207,26 @@
 | Kyungrim Chung (정경림) | Former MA Student, 연세대학교 |
 | Yujin An (안유진) | Former MA Student, 고려대학교 국제대학원 |
 
-#### 미해결 (다음 세션)
-- [ ] **PII 유출**: `files/KMAP Working Group 멤버 정보 수집 양식(응답).xlsx`가 public repo에 커밋되어 있고 raw.githubusercontent.com으로 실제 다운로드 가능 (이메일 6건 노출). 파일 삭제 vs git 히스토리 재작성 여부 결정 필요.
-- [ ] 이번 세션 변경사항(`_data/team_members.yml`, `_pages/events.md`, `_pages/publications.md`, 신규 사진 3장) 커밋·push
+#### 미해결 (다음 세션) — 2026-08-25 갱신: 커밋·push, xlsx 삭제+히스토리 재작성, 학생 이메일 제거, 포스터 링크는 8/17 세션 2에서 완료
+- [x] **PII 유출**: `files/KMAP Working Group 멤버 정보 수집 양식(응답).xlsx`가 public repo에 커밋되어 있고 raw.githubusercontent.com으로 실제 다운로드 가능 (이메일 6건 노출). 파일 삭제 vs git 히스토리 재작성 여부 결정 필요.
+- [x] 이번 세션 변경사항 커밋·push
 - [ ] 최동현이 Form 응답에 없는데 사이트엔 등록 — 유지 여부 확인
 - [ ] 김보람 이메일이 개인 네이버 주소 — 기관 이메일 전환 또는 비공개 여부
-- [ ] 이벤트 포스터 PDF 9장(Drive에 있음) 링크 여부
-- [ ] Jekyll 빌드 미검증 (로컬에 jekyll 미설치)
+- [x] 이벤트 포스터 PDF 9장 링크
+- [x] Jekyll 로컬 빌드: `BUNDLE_PATH=vendor/bundle bundle exec jekyll build --config _config.yml,<plugins: [] 오버라이드>` (jekyll-sitemap은 Gemfile에 없어 검증 빌드에서만 비활성)
 - [ ] 기존 멤버 사진 파일명에 개인정보 단서 포함 (예: `주민등록증3.5x4.5cm - Kelly C.jpg`) — 정리 필요
 - [ ] `local/inbox/`를 원자료 스테이징 폴더로 신설 (`.gitignore`의 `local/`에 이미 포함)
+
+---
+
+### 2026-08-25: 홈 슬라이드쇼 + Events 탭 구조화
+
+#### 완료된 작업
+1. **홈 배너 → 행사 사진 슬라이드쇼**: `images/event_mainpage/` 17장(2024-12~2026-08) 자동 순회, 4초 크로스페이드. EXIF/GPS 제거.
+2. **Events 페이지 두 탭(Seminars / Conferences)**: 내용을 `_data/events.yml`로 데이터화(세미나 9 + 학회 4). 학회 항목(2025 이민학회 후기, 2026 이민학회 전기, 2026 정치학회 하계, 2025 강원대 합동워크샵)은 포스터에서 읽어 채움 — **비멤버 인명 로마자 표기·한글 발표제목 영역은 미검증**. 2025-08-28 송영훈 강연은 강원대 합동워크샵 항목으로 통합.
+3. 포스터 폴더 재편: `images/posters` → `posters_seminar`, 학회 포스터 `poster_conference` (ASCII 파일명).
+
+#### 남은 일
+- [ ] events.yml 학회 항목의 비멤버 인명 로마자·번역 제목 확인
+- [ ] 2026 KPSA 패널 날짜(8/18)는 사진 파일명 기준 — 프로그램북으로 확인
+- [ ] 8/17 잔여: GitHub Support 고아 객체 정리, Alumni duration, 최동현 등록 유지 여부, 김보람 이메일, 멤버 사진 파일명 정리

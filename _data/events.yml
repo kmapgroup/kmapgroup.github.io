@@ -1,0 +1,306 @@
+# Events shown on /events/. Rendered by _pages/events.md.
+#
+#   category   : seminar | conference   (which tab)
+#   sort       : YYYY-MM-DD  (ordering; newest first)
+#   year       : grouping heading
+#   type, date, venue, title, summary
+#   poster     : path under /images/   poster_pdf: path under /files/  (optional)
+#   seminar    : speaker, affiliation, talk
+#   conference : panels: [ {title, slot, chair, papers: [{authors, title}], discussants, image} ]
+#
+# Names of non-KMAP participants are romanized from Korean posters; verify before citing.
+
+# ---------------------------------------------------------------- conferences
+- category: conference
+  sort: 2026-08-18
+  year: 2026
+  type: Conference Panels
+  date: "August 18, 2026"
+  venue: "College of Humanities, Social Sciences and Business, Pukyong National University (Daeyeon Campus), Busan"
+  title: "2026 KPSA Summer Conference: KMAP Panels I &amp; II"
+  summary: >-
+    KMAP (Korea University SSK Immigration Politics Research Group) organized two panels at the
+    2026 Korean Political Science Association Summer Conference, held under the theme
+    &ldquo;Local Autonomy and Balanced Development: Remaining Tasks of the 9th Nationwide Local Elections&rdquo;
+    (August 18&ndash;20, 2026).
+  poster: poster_conference/2026-kpsa-summer-poster.png
+  panels:
+    - title: "Panel I &middot; The Politicization and Institutionalization of Migration: Comparative Politics of Labor, Othering, and the Climate Crisis"
+      slot: "13:00&ndash;14:40, Room 628"
+      chair: "Shin-goo Kang (Ajou University)"
+      papers:
+        - authors: "Byoungha Lee (University of Seoul)"
+          title: "Between Policy Convergence and Divergence: Comparing Labor Migration Policies in Korea and Japan"
+        - authors: "Sun-young Park (Seoul National University)"
+          title: "Populist Logics of Demonization of &ldquo;Invading Others&rdquo;: Comparative Findings from the EU Countries and South Korea"
+        - authors: "Boram Kim (Korea University)"
+          title: "The Political Construction and Institutionalization of Climate Migration: A Discourse Analysis of the Australia&ndash;Tuvalu Falepili Union Treaty"
+      discussants: "Sungjo Kim (Yonsei University), Sungmin Han (Hankuk University of Foreign Studies), Youngook Jang (KIEP)"
+      image: poster_conference/2026-kpsa-summer-panel1.png
+    - title: "Panel II &middot; Reconfiguring Political Boundaries around Immigrants"
+      slot: "15:40&ndash;17:20, Room 628"
+      chair: "Jun Young Choi (Inha University)"
+      papers:
+        - authors: "Sunkyoung Park (Korea University) and Heedo Lee (Yonsei University)"
+          title: "Does Partisan Alignment across Local Governments Shape Multicultural Family Support Policy? Evidence from South Korea"
+        - authors: "Byoungha Lee and Dabin Lee (University of Seoul)"
+          title: "An Analysis of the Anti-Immigrant Discourse of Japan&rsquo;s Sanseito"
+        - authors: "Woo Chang Kang, Honggi Kim (Korea University), and Hanil Chang (Kookmin University)"
+          title: "Will the Spread of Artificial Intelligence Change Attitudes toward Immigrants? An Experimental Study in South Korea"
+      discussants: "Kang-wook Han (Korea University), Min-young Yoo (Korea University), Seung-wook Ryu (Sogang University)"
+      image: poster_conference/2026-kpsa-summer-panel2.png
+
+- category: conference
+  sort: 2026-06-25
+  year: 2026
+  type: Conference Session
+  date: "June 25, 2026"
+  venue: "International Conference Hall (Room 301), Centennial Memorial Hall, University of Seoul"
+  title: "2026 Korean Association for Immigration Studies Spring Conference: KMAP Special Session"
+  summary: >-
+    KMAP organized a special session at the 2026 Spring Conference of the Korean Association for
+    Immigration Studies (한국이민학회), held to commemorate the 19th Together Day (세계인의 날) under the theme
+    &ldquo;Immigration and an Inclusive Society: A New Paradigm for Designing Coexistence.&rdquo;
+  poster: poster_conference/2026-kaim-spring-poster.png
+  panels:
+    - title: "Special Session 4 &middot; Migration Politics for Diversity, Coexistence, and Integration"
+      slot: "15:40&ndash;17:30, Room 308"
+      chair: "Jun Young Choi (Inha University)"
+      papers:
+        - authors: "Sun-young Park (Seoul National University), Woo Chang Kang (Korea University), Byoungha Lee (University of Seoul), and Hanil Chang (Kookmin University)"
+          title: "The Social Integration of Korean Chinese in Korean Society"
+        - authors: "Sunkyoung Park, Hannah Kim, and Boram Kim (Korea University)"
+          title: "Same Bed, Different Dreams: Spousal Gaps in Perceptions of Gender-Role Stereotypes within Multicultural Families"
+        - authors: "Inbok Rhee and Seoyeon Kim (Yonsei University)"
+          title: "The Great Divide: The Global North/South Gap in Migration Research"
+      discussants: "Seung-wook Ryu (Dartmouth College), Chansong Kim (Sogang University)"
+      image: poster_conference/2026-kaim-spring-session4.png
+
+- category: conference
+  sort: 2025-12-19
+  year: 2025
+  type: Conference Session
+  date: "December 19, 2025"
+  venue: "College of Social Sciences, Hanyang University"
+  title: "2025 Korean Association for Immigration Studies Fall Conference: KMAP Session"
+  summary: >-
+    KMAP organized a session at the 2025 Fall Conference of the Korean Association for Immigration
+    Studies (한국이민학회), held under the theme &ldquo;Crossing the Boundaries of Peace: Challenges and
+    Tasks in the Era of Mixed Migration.&rdquo;
+  poster: poster_conference/2025-kaim-fall-poster.png
+  panels:
+    - title: "Session 8 &middot; Migration and Social Integration: The Politics of Perception, Threat, and Competition"
+      slot: "Room 552"
+      chair: "Woo Chang Kang (Korea University)"
+      papers:
+        - authors: "Hannah Kim, Boram Kim, and Sunkyoung Park (Korea University)"
+          title: "How Does Discrimination Lead Immigrants into Politics? Discrimination and Political Participation in the National Survey of Multicultural Families"
+        - authors: "Kyungrim Chung (Yonsei University)"
+          title: "The Racialized Structure of Immigration Threat"
+        - authors: "Sumin Kim (Korea University)"
+          title: "Marriage-Age Sex Ratios and Immigration Acceptance: How Local Demographic Structure Shapes Attitudes toward Immigration"
+      discussants: "Hyunjun Kim (Kangwon National University), Sun-young Park (Seoul National University), Inbok Rhee (Yonsei University)"
+      image: poster_conference/2025-kaim-fall-session8.png
+
+- category: conference
+  sort: 2025-08-28
+  year: 2025
+  type: Joint Workshop
+  date: "August 28&ndash;29, 2025"
+  venue: "#222, Building 1, College of Social Sciences, Kangwon National University"
+  title: "KNU&ndash;KU Joint Workshop: Migration and Refugee Politics in the Era of Global Mixed Migration"
+  summary: >-
+    A two-day joint workshop of the Global Refugee Crisis Research Group (Kangwon Institute for
+    Unification Studies, Kangwon National University) and KMAP (Peace and Democracy Institute,
+    Korea University), supported by the National Research Foundation of Korea. Day 1 featured an
+    invited lecture and two graduate-student sessions; Day 2 was devoted to progress reports from
+    each research team and discussion of joint research directions.
+  poster: poster_conference/2025-knu-ku-workshop-poster.jpg
+  panels:
+    - title: "Invited Lecture"
+      slot: "13:30&ndash;14:30"
+      papers:
+        - authors: "Younghoon Song (Kangwon Institute for Unification Studies, Kangwon National University)"
+          title: "New Patterns of the Refugee Crisis and the International Community&rsquo;s Response"
+      note: >-
+        The talk examines why the global refugee crisis is expanding and becoming protracted, why
+        conflicts emerge around refugees, and what policy and institutional responses the
+        international community can pursue, drawing on key debates in forced-migration research.
+    - title: "Graduate Student Session I"
+      slot: "14:30&ndash;16:10"
+      chair: "Byoungha Lee (University of Seoul)"
+      papers:
+        - authors: "Heedo Lee (Yonsei University)"
+          title: "Refugee Camp Unraveling: The Effect of Refugee Settlement on Communal Conflict"
+        - authors: "Sunju Gong (Kangwon National University)"
+          title: "Empowerment and Resilience of Rohingya Refugee Women: Exploring the Potential for Change in Refugee Communities"
+        - authors: "Sumin Kim (Korea University)"
+          title: "Attitudes Toward International Marriage"
+        - authors: "Kyungrim Chung (Yonsei University)"
+          title: "Racialized Threats: How Immigration Threat Perception Shapes American Sentiments Toward Foreign Countries"
+      discussants: "Hannah Kim (Korea University), Hyunjun Kim (Kangwon National University)"
+    - title: "Graduate Student Session II"
+      slot: "16:20&ndash;18:00"
+      chair: "Yujin Lim (Kangwon National University)"
+      papers:
+        - authors: "Seungji Lee (Kangwon National University)"
+          title: "Thriving in Confinement: What Enables Rohingya Refugee Women&rsquo;s Economic Empowerment in Cox&rsquo;s Bazar"
+        - authors: "Yujin An (Korea University)"
+          title: "Welfare Attitudes and the Acceptance of Foreigners and North Korean Defectors: Between Welfare Chauvinism and Co-ethnic Solidarity"
+        - authors: "Jiwoon Kim (Yonsei University)"
+          title: "Security Sensitivity and Destination Choice among Migrant Families: Risk Perception by Child Gender"
+        - authors: "Seoyeon Kim (Yonsei University)"
+          title: "Trends in the Fragmentation of Korea&rsquo;s Central-Government Policies on Foreign Nationals"
+      discussants: "Boram Kim (Korea University), Sanghoon Park (Kangwon National University)"
+
+# ------------------------------------------------------------------- seminars
+- category: seminar
+  sort: 2025-11-24
+  year: 2025
+  type: Colloquium
+  date: "November 24, 2025"
+  venue: "Conference Room 326, Sangnam Jeonggyeonggwan, Korea University"
+  title: "KMAP 7th Invited Expert Colloquium"
+  speaker: "Jongkwan Lee"
+  affiliation: "Department of Economics, Yonsei University"
+  talk: "Immigrant Inflows and Changes in Our Society"
+  summary: >-
+    The talk examines the economic and socio-cultural effects of immigrant inflows in Korea,
+    highlighting productivity gains and limited adverse labor-market impacts for natives.
+  poster: posters_seminar/kmap-7th-20251124.jpg
+  poster_pdf: posters/kmap-7th-20251124.pdf
+
+- category: seminar
+  sort: 2025-11-20
+  year: 2025
+  type: Colloquium
+  date: "November 20, 2025"
+  venue: "Small Theater, B2, 4.18 Memorial Hall, Korea University"
+  title: "KMAP 6th Invited Expert Colloquium"
+  speaker: "Yoshikuni Ono"
+  affiliation: "Political Science, Waseda University"
+  talk: "Public Demand for Police Discrimination: How Misperceptions Drive Support for Biased Policing in Japan"
+  summary: >-
+    Effective reform should pair internal measures (training/oversight) with public information on
+    crime statistics, media guidelines, and civic education to reduce demand for biased policing.
+  poster: posters_seminar/kmap-6th-20251120.jpg
+  poster_pdf: posters/kmap-6th-20251120.pdf
+
+- category: seminar
+  sort: 2025-10-27
+  year: 2025
+  type: Invited Lecture
+  date: "October 27, 2025"
+  venue: "#521, SK Future Hall, Korea University"
+  title: "Lecture"
+  speaker: "Taeyoung Kang"
+  affiliation: "UnderScore"
+  talk: "How Are Research and Knowledge Work (Already) Being Automated?"
+  summary: >-
+    This lecture explores how research and knowledge work are already being automated with large
+    language models, showcasing Underscore&rsquo;s applied NLP and computational social science workflows.
+  poster: posters_seminar/lecture-20251027.jpg
+  poster_pdf: posters/lecture-20251027.pdf
+
+- category: seminar
+  sort: 2025-10-24
+  year: 2025
+  type: Colloquium
+  date: "October 24, 2025"
+  venue: "Conference Room 326, Sangnam Jeonggyeonggwan, Korea University"
+  title: "KMAP 5th Invited Expert Colloquium"
+  speaker: "Minyi Yoo"
+  affiliation: "Migration Research &amp; Training Centre"
+  talk: "Building and Utilizing Foundational Data for Immigration Fiscal Analysis"
+  summary: >-
+    Introducing practical ways to build and use foundational data for immigration fiscal analysis,
+    and showing how systematic budget analysis can support evidence-based policy decisions,
+    transparency, and long-term fiscal planning under alternative immigration scenarios.
+  poster: posters_seminar/kmap-5th-20251024.jpg
+  poster_pdf: posters/kmap-5th-20251024.pdf
+
+- category: seminar
+  sort: 2025-05-09
+  year: 2025
+  type: Special Seminar
+  date: "May 9, 2025"
+  venue: "#421, SK Future Hall, Korea University"
+  title: "KMAP&ndash;Gender Politics Research Group Joint Seminar Series"
+  speaker: "Charles Crabtree"
+  affiliation: "Department of Government, Dartmouth College"
+  talk: "Can AI Help Reduce Prejudice? Evaluating the Effectiveness of AI-Powered Personalized Persuasion on Support for Transgender Rights"
+  summary: >-
+    This talk asks whether AI-powered, personalized conversations can reduce prejudice at scale, and
+    presents evidence that a brief chatbot dialogue tailored to individuals&rsquo; moral values can
+    modestly increase support for transgender rights, with effects that attenuate over time.
+  poster: posters_seminar/joint-seminar-20250509.jpg
+  poster_pdf: posters/joint-seminar-20250509.pdf
+
+- category: seminar
+  sort: 2025-04-18
+  year: 2025
+  type: Colloquium
+  date: "April 18, 2025"
+  venue: "#508, Sangnam Jeonggyeonggwan, Korea University"
+  title: "KMAP 4th Invited Expert Colloquium"
+  speaker: "Changwon Lee"
+  affiliation: "Migration Research &amp; Training Centre"
+  talk: "Key Terms and Statistics in Immigration Policy"
+  summary: >-
+    The talk calls for stronger statistical capacity and governance: digitized administrative
+    inputs, cross-agency collaboration, wider micro-data access, and standardized migration items
+    across major surveys.
+  poster: posters_seminar/kmap-4th-20250418.jpg
+  poster_pdf: posters/kmap-4th-20250418.pdf
+
+- category: seminar
+  sort: 2025-02-07
+  year: 2025
+  type: Colloquium
+  date: "February 7, 2025"
+  venue: "#619, Sangnam Jeonggyeonggwan, Korea University"
+  title: "KMAP 3rd Invited Expert Colloquium"
+  speaker: "Hyemin Park"
+  affiliation: "NEWWAYS"
+  talk: "Why Good Politicians Fail to Emerge: A Political System Perspective"
+  summary: >-
+    The talk calls for systemic and cultural reforms that nurture talent and enable real-world
+    problem solving. It introduces NewWays&rsquo; approach: support young candidates, engage 2030
+    voters, and research diversity-friendly institutions.
+  poster: posters_seminar/kmap-3rd-20250207.jpg
+  poster_pdf: posters/kmap-3rd-20250207.pdf
+
+- category: seminar
+  sort: 2025-01-03
+  year: 2025
+  type: Colloquium
+  date: "January 3, 2025"
+  venue: "Conference Room 326, Sangnam Jeonggyeonggwan, Korea University"
+  title: "KMAP 2nd Invited Expert Colloquium"
+  speaker: "John Kuk (Seung-min Kuk)"
+  affiliation: "Department of Political Science, Michigan State University"
+  talk: "The Economic Origins of Racial Attitudes Polarization"
+  summary: >-
+    This colloquium examines whether economic distress causally increases racial resentment and
+    ethnocentric attitudes. It argues that economic hardship can activate in-group identification
+    and out-group bias, thereby shaping racial attitudes.
+  poster: posters_seminar/kmap-2nd-20250103.jpg
+  poster_pdf: posters/kmap-2nd-20250103.pdf
+
+- category: seminar
+  sort: 2024-12-26
+  year: 2024
+  type: Colloquium
+  date: "December 26, 2024"
+  venue: "Conference Room 326, Sangnam Jeonggyeonggwan, Korea University"
+  title: "KMAP 1st Invited Expert Colloquium"
+  speaker: "Dong-Hoon Seol"
+  affiliation: "Department of Sociology, Jeonbuk National University"
+  talk: "The Politics of Immigration in Korea: Labor Markets, Public Opinion, and Immigration Policy"
+  summary: >-
+    This colloquium presentation reviews recent changes in Korea&rsquo;s laws, institutions, and policy
+    frameworks related to migrants, with particular attention to the current administration&rsquo;s
+    approach to foreign nationals. It further examines Korea&rsquo;s demographic and labor market
+    challenges and discusses key factors driving recent inflows of foreign residents.
+  poster: posters_seminar/kmap-1st-20241226.jpg
+  poster_pdf: posters/kmap-1st-20241226.pdf
