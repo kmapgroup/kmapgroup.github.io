@@ -20,12 +20,13 @@ permalink: /events/
   font-size: 0.9em;
 }
 .event-poster .program-image { margin-top: 10px; }
+/* muted text on the dark card (#303030): use the theme's --light (#adb5bd), not #555 */
 .event-meta {
-  color: #555;
+  color: #adb5bd;
   font-size: 0.95em;
 }
 .event-affil {
-  color: #555;
+  color: #adb5bd;
 }
 .jumbotron h4 {
   margin-top: 0;
