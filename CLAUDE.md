@@ -23,6 +23,7 @@
 | `_pages/members.md` | 멤버 페이지 템플릿 |
 | `/images/멤버사진/` | 멤버 프로필 사진 |
 | `_data/events.yml` | 이벤트 데이터 (seminar / conference 두 탭, `_pages/events.md`가 렌더) |
+| `_data/publications.yml` | 논문·저서 데이터 (`_pages/publications.md` + `_includes/citation.html`이 렌더). 평탄 스키마 — Google Sheet 열로 1:1 대응 가능 |
 | `images/posters_seminar/`, `files/posters/` | 세미나 포스터 JPG / PDF |
 | `images/poster_conference/` | 학회 포스터·세션 프로그램 이미지 |
 | `images/event_mainpage/` | 홈 슬라이드쇼 사진 (폴더 내 파일 자동 순회, `assets/javascript/slideshow.js`) |
@@ -68,6 +69,9 @@
 3. Git commit & push
 
 ---
+
+## 논문 추가 규칙 (2026-08-25)
+- `_pages/publications.md`는 템플릿만 — **내용은 `_data/publications.yml`에 항목 추가** (필드 설명은 파일 상단 주석). `type: article|book|working|conference`, `lang: ko|en`(따옴표 규칙), 연도 내 순서 = 파일 순서. `doi`를 넣으면 링크 자동 생성.
 
 ## 이벤트 추가 규칙 (2026-08-25)
 - `_pages/events.md`는 템플릿만 — **내용은 `_data/events.yml`에 항목 추가**. 필드 설명은 파일 상단 주석.

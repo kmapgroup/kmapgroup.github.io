@@ -1,0 +1,5 @@
+{%- comment -%} One publication as a citation line. Usage: {% include citation.html p=item %} {%- endcomment -%}
+{%- assign p = include.p -%}
+{{ p.authors }}{% if p.lang == "ko" %}.{% endif %} ({{ p.year }}). {% if p.type == "book" %}<i>{{ p.title }}</i>. {{ p.venue }}.{% else %}{% if p.lang == "ko" %}{{ p.title }}{% assign last_char = p.title | slice: -1 %}{% if last_char != "?" %}.{% endif %} {% else %}&ldquo;{{ p.title }}.&rdquo; {% endif %}<i>{{ p.venue }}</i>{% if p.volume %}, {{ p.volume }}{% endif %}{% if p.pages %}, {{ p.pages }}{% endif %}.{% endif %}
+{%- if p.note %} {{ p.note }}.{% endif -%}
+{%- if p.doi %} <a href="https://doi.org/{{ p.doi }}" target="_blank">doi:{{ p.doi }}</a>{% elsif p.url %} <a href="{{ p.url }}" target="_blank">[link]</a>{% endif -%}
