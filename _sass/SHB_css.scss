@@ -2,6 +2,9 @@
 body, .tooltip, .popover {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Apple SD Gothic Neo", "Noto Sans KR", Arial, sans-serif;
 }
+body {
+  font-size: 1.0625rem; /* theme default 0.9375rem (15px) -> 17px */
+}
 
 img { 
     border-radius:5%;
